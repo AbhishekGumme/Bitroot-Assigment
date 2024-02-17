@@ -90,6 +90,9 @@
     align-items: center;
     padding: 20px;
   }
+  .learn-more-overlay {
+    display: none;
+  }
   .image-card {
     width: 250px;
     border: 1px solid #ddd;

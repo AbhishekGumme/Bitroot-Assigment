@@ -20,9 +20,9 @@ const style = {
   pb: 2,
 };
 
-
+let object=null;
 function ChildModal() {
-  const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
     setOpen(true);
   };
@@ -32,19 +32,38 @@ function ChildModal() {
 
   return (
     <React.Fragment>
-     
+     <div className='imagescontainers'>
+      <img src={object.author.avatar} onClick={handleOpen} className='image-author' />
+      <div className='author-info'>
+        <span>{object.author.name}: {object.author.role}</span>
+      </div>
+    </div> 
       <Modal
         open={open}
         onClose={handleClose}
         aria-labelledby="child-modal-title"
         aria-describedby="child-modal-description"
       >
-        <Box sx={{ ...style, width: 200 }}>
-          <h2 id="child-modal-title">Text in a child modal</h2>
-          <p id="child-modal-description">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          </p>
-          <Button onClick={handleClose}>Close Child Modal</Button>
+        <Box className='childmodal-box'>
+        <IconButton 
+              aria-label="close"
+              onClick={handleClose} // Add your close handler function here
+              sx={{
+                position: 'absolute',
+                right: 8,
+                top: 8,
+                color: 'inherit',
+              }}
+            >
+              <CloseIcon/>
+            </IconButton>
+          <div className='childcontainer'>
+            <div className='childimage'><img src={object.author.avatar}/></div>
+            <div className='childtext'>
+              <h3>{object.author.name}</h3>
+              <h4>{object.author.role}</h4>
+            </div>
+          </div>
         </Box>
       </Modal>
     </React.Fragment>
@@ -52,18 +71,22 @@ function ChildModal() {
 }
 
 export default function NestedModal({item,handleClosePopup}) {
-    console.log(item)
+    //console.log(item)
+    object=item;
+    console.log(object)
   const [open, setOpen] = React.useState(false);
   const [propdata,setpropdata]=React.useState(true)
    const handleOpen = () => {
      setOpen(true);
      
+     
    };
+ 
   const handleClose = () => {
     setOpen(false);
     handleClosePopup();
   };
-
+  
   return (
     <>
     <div>
@@ -95,19 +118,14 @@ export default function NestedModal({item,handleClosePopup}) {
               <div className="card-contents">
                 <h3>{item.title}</h3>
                 <p>{item.content}</p>
-                <div className='imagescontainers'>
-      <img src={item.author.avatar} onClick={handleOpen} className='image-author' />
-      <div className='author-info'>
-        <span>{item.author.name}: {item.author.role}</span>
-      </div>
-    </div>
+                
               </div>
             
             </div>
             </div>
           
         </div>
-          <ChildModal />
+          <ChildModal  />
         </Box>
       </Modal>
     </div>

@@ -3,6 +3,28 @@
     display: flex;
     justify-content: center;
 }
+.childcontainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.childimage img{
+  width:15rem;
+  margin-top: 30px;
+  border-radius: 10px;
+ 
+}
+.childtext h3{
+  font-weight: bolder;
+  font-size: 20px;
+  text-align: center;
+}
+.childtext h4{
+  font-weight: bolder;
+  font-size: 15px;
+  text-align: center;
+}
 @media screen and (min-width:1024px) {
     .image-containers{
         display: flex;
@@ -62,6 +84,7 @@
         color: #5d5c5c;
       }
 }
+
 .modal-box {
     position: fixed; /* Ensures that the modal is fixed in the viewport */
     top: 50%; /* Positions the modal box 50% from the top */
@@ -77,10 +100,28 @@
     padding-bottom: 20px; /* Adds padding inside the modal box */
  border: none;
 }
+.childmodal-box{
+  position: fixed; /* Ensures that the modal is fixed in the viewport */
+  top: 50%; /* Positions the modal box 50% from the top */
+  left: 50%; /* Positions the modal box 50% from the left */
+  transform: translate(-50%, -50%); /* Centers the modal box horizontally and vertically */
+  width: 200px; /* Set the width of the modal box */
+  max-width: 90%; /* Set the maximum width to ensure responsiveness */
+  background-color: #ffffff; /* Background color of the modal */
+  border-radius: 30px; /* Adds rounded corners to the modal box */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Adds a shadow effect to the modal box */
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 20px; /* Adds padding inside the modal box */
+border: none;
+}
 @media (max-width: 789px) {
     .modal-box {
         width: 269px;
         padding: 10px 28px 18px 39px; /* Adjust padding as needed */
+    }
+    .childmodal-box{
+      width:160px;
     }
 }
 @media only screen and (max-width: 768px) {
