@@ -57,6 +57,7 @@ export default function NestedModal({item,handleClosePopup}) {
   const [propdata,setpropdata]=React.useState(true)
    const handleOpen = () => {
      setOpen(true);
+     
    };
   const handleClose = () => {
     setOpen(false);
@@ -95,7 +96,7 @@ export default function NestedModal({item,handleClosePopup}) {
                 <h3>{item.title}</h3>
                 <p>{item.content}</p>
                 <div className='imagescontainers'>
-      <img src={item.author.avatar} className='image-author' />
+      <img src={item.author.avatar} onClick={handleOpen} className='image-author' />
       <div className='author-info'>
         <span>{item.author.name}: {item.author.role}</span>
       </div>
