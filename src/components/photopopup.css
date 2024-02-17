@@ -75,7 +75,7 @@
       .imagescontainers .author-info {
         display: flex;
       align-items: center;
-        margin-left: 20px; /* Adjust as needed */
+        margin-left: 20px;
       }
       
       .imagescontainers .author-info span {
@@ -86,39 +86,39 @@
 }
 
 .modal-box {
-    position: fixed; /* Ensures that the modal is fixed in the viewport */
-    top: 50%; /* Positions the modal box 50% from the top */
-    left: 50%; /* Positions the modal box 50% from the left */
-    transform: translate(-50%, -50%); /* Centers the modal box horizontally and vertically */
-    width: 400px; /* Set the width of the modal box */
-    max-width: 90%; /* Set the maximum width to ensure responsiveness */
-    background-color: #ffffff; /* Background color of the modal */
-    border-radius: 30px; /* Adds rounded corners to the modal box */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Adds a shadow effect to the modal box */
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 400px; 
+    max-width: 90%; 
+    background-color: #ffffff; 
+    border-radius: 30px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
     padding-left: 100px;
     padding-right: 100px;
-    padding-bottom: 20px; /* Adds padding inside the modal box */
+    padding-bottom: 20px; 
  border: none;
 }
 .childmodal-box{
-  position: fixed; /* Ensures that the modal is fixed in the viewport */
-  top: 50%; /* Positions the modal box 50% from the top */
-  left: 50%; /* Positions the modal box 50% from the left */
-  transform: translate(-50%, -50%); /* Centers the modal box horizontally and vertically */
-  width: 200px; /* Set the width of the modal box */
-  max-width: 90%; /* Set the maximum width to ensure responsiveness */
-  background-color: #ffffff; /* Background color of the modal */
-  border-radius: 30px; /* Adds rounded corners to the modal box */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Adds a shadow effect to the modal box */
+  position: fixed; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  width: 200px;
+  max-width: 90%; 
+  background-color: #ffffff; 
+  border-radius: 30px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
   padding-left: 100px;
   padding-right: 100px;
-  padding-bottom: 20px; /* Adds padding inside the modal box */
+  padding-bottom: 20px; 
 border: none;
 }
 @media (max-width: 789px) {
     .modal-box {
         width: 269px;
-        padding: 10px 28px 18px 39px; /* Adjust padding as needed */
+        padding: 10px 28px 18px 39px; 
     }
     .childmodal-box{
       width:160px;
@@ -168,7 +168,7 @@ border: none;
       .imagescontainers .author-info {
         display: flex;
       align-items: center;
-        margin-left: 20px; /* Adjust as needed */
+        margin-left: 20px; 
       }
       
       .imagescontainers .author-info span {

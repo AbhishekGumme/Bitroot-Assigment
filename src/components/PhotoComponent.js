@@ -5,7 +5,7 @@ import NestedModal from './Popupphotos';
 const PhotoComponent = () => {
 const [data,setdata]=useState([]);
 const [dates,setdate]=useState('');
-const [props,setprops]=useState(false)
+//const [props,setprops]=useState(false)
 const [selectedItem, setSelectedItem] = useState(null);
 useEffect(()=>{
     fetchData();

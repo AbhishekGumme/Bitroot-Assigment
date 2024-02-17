@@ -1,24 +1,24 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
-import Button from '@mui/material/Button';
+//import Button from '@mui/material/Button';
 import { IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import '../../src/components/photopopup.css'
-const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  borderRadius:'30px',
-  transform: 'translate(-50%, -50%)',
-  width: 400,
-  bgcolor: 'background.paper',
+// const style = {
+//   position: 'absolute',
+//   top: '50%',
+//   left: '50%',
+//   borderRadius:'30px',
+//   transform: 'translate(-50%, -50%)',
+//   width: 400,
+//   bgcolor: 'background.paper',
  
-  boxShadow: 24,
-  pt: 2,
-  px: 12,
-  pb: 2,
-};
+//   boxShadow: 24,
+//   pt: 2,
+//   px: 12,
+//   pb: 2,
+// };
 
 let object=null;
 function ChildModal() {
@@ -33,7 +33,7 @@ function ChildModal() {
   return (
     <React.Fragment>
      <div className='imagescontainers'>
-      <img src={object.author.avatar} onClick={handleOpen} className='image-author' />
+      <img src={object.author.avatar} onClick={handleOpen} className='image-author' alt='image is not showing'/>
       <div className='author-info'>
         <span>{object.author.name}: {object.author.role}</span>
       </div>
@@ -47,7 +47,7 @@ function ChildModal() {
         <Box className='childmodal-box'>
         <IconButton 
               aria-label="close"
-              onClick={handleClose} // Add your close handler function here
+              onClick={handleClose} 
               sx={{
                 position: 'absolute',
                 right: 8,
@@ -58,7 +58,7 @@ function ChildModal() {
               <CloseIcon/>
             </IconButton>
           <div className='childcontainer'>
-            <div className='childimage'><img src={object.author.avatar}/></div>
+            <div className='childimage'><img src={object.author.avatar} alt='image is not showing'/></div>
             <div className='childtext'>
               <h3>{object.author.name}</h3>
               <h4>{object.author.role}</h4>
@@ -76,11 +76,11 @@ export default function NestedModal({item,handleClosePopup}) {
     console.log(object)
   const [open, setOpen] = React.useState(false);
   const [propdata,setpropdata]=React.useState(true)
-   const handleOpen = () => {
-     setOpen(true);
+  //  const handleOpen = () => {
+  //    setOpen(true);
      
      
-   };
+  //  };
  
   const handleClose = () => {
     setOpen(false);
@@ -100,7 +100,7 @@ export default function NestedModal({item,handleClosePopup}) {
         <Box className="modal-box">
         <IconButton 
               aria-label="close"
-              onClick={handleClose} // Add your close handler function here
+              onClick={handleClose} 
               sx={{
                 position: 'absolute',
                 right: 8,
