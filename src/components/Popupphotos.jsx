@@ -20,6 +20,7 @@ const style = {
   pb: 2,
 };
 
+
 function ChildModal() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
@@ -72,7 +73,7 @@ export default function NestedModal({item,handleClosePopup}) {
         aria-labelledby="parent-modal-title"
         aria-describedby="parent-modal-description"
       >
-        <Box sx={{ ...style, width: 400 }}>
+        <Box className="modal-box">
         <IconButton 
               aria-label="close"
               onClick={handleClose} // Add your close handler function here
@@ -96,7 +97,7 @@ export default function NestedModal({item,handleClosePopup}) {
                 <div className='imagescontainers'>
       <img src={item.author.avatar} className='image-author' />
       <div className='author-info'>
-        <span id="name">{item.author.name}: {item.author.role}</span>
+        <span>{item.author.name}: {item.author.role}</span>
       </div>
     </div>
               </div>
